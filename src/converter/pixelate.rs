@@ -8,7 +8,7 @@ pub fn save_image(image: &DynamicImage, file_path: &str) -> Result<(), image::Im
     image.save(file_path)
 }
 
-pub fn pixelate(image: &DynamicImage, pixel_size: u32) -> DynamicImage {
+pub fn pixelate_image(image: &DynamicImage, pixel_size: u32) -> DynamicImage {
     image.resize_exact(
         image.width() / pixel_size,
         image.height() / pixel_size,
